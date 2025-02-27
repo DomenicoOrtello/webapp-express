@@ -3,6 +3,6 @@ const errorsHandler = (err, req, res, next) => {
       error: "Internal Server Error",
       message: err.message,
     });
-  };
-  
-  module.exports = errorsHandler;
+};
+
+module.exports = errorsHandler;
