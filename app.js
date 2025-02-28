@@ -6,7 +6,6 @@ const movieRouter = require ("./routers/movieRouters")
 const errorsHandler = require("./middleware/errorsHandler");
 const notFound = require ("./middleware/notFound")
 const { PORT, FE_URL } = process.env;
-require('dotenv').config();
 
 // Middleware dei file statici
 app.use(express.static("public"));
