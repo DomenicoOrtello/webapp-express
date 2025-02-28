@@ -7,18 +7,18 @@ const errorsHandler = require("./middleware/errorsHandler");
 const notFound = require ("./middleware/notFound")
 const { PORT, FE_URL } = process.env;
 
-// Middleware dei file statici
-app.use(express.static("public"));
-
-// Middleware del parsing del req.body
-app.use(express.json());
-
 // Middleware CORS
 app.use(
   cors({
     origin: FE_URL,
   })
 );
+
+// Middleware dei file statici
+app.use(express.static("public"));
+
+// Middleware del parsing del req.body
+app.use(express.json());
 
 // Rotte dell'app
 app.use("/movie", movieRouter)
